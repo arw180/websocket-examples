@@ -12,11 +12,11 @@ ws = create_connection("ws://localhost:8888/ws")
 data = {'command': 'get_colors'}
 ws.send(json.dumps(data))
 result =  ws.recv()
-print "Received colors: '%s'" % result
+print ("Received colors: %s" % result)
 
 data = {'command': 'get_shapes'}
 ws.send(json.dumps(data))
 result =  ws.recv()
-print "Received shapes: '%s'" % result
+print ("Received shapes: %s" % result)
 
 ws.close()
