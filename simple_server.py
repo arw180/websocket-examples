@@ -22,7 +22,7 @@ class WSHandler(tornado.websocket.WebSocketHandler):
             self.write_message('Circle, Square, Triangle')
 
     def on_close(self):
-      print 'connection closed'
+        print 'connection closed'
 
 application = tornado.web.Application([
     (r'/ws', WSHandler),
